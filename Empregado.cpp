@@ -1,6 +1,6 @@
 #include "Empregado.hpp"
 
-#define MAXIMO_HORAS_TRABALHADAS 8
+#define LIMITE_HORAS_TRABALHADAS 8
 #define ACRESCIMO_HORA_EXTRA 0,5
 
 void Empregado::setNome(std::string nome) { this->nome = nome; }
@@ -15,8 +15,8 @@ double Empregado::getQuotaMensalVendas() { return this->quotaMensalVendas;}
 double Empregado::pagamentoMensal(double horasTrabalhadas) {
     
     //Cálculo de hora extra (+50% se horasTrabalhadas > 8)
-    if(horasTrabalhadas > MAXIMO_HORAS_TRABALHADAS) {
-        double horasExtras = horasTrabalhadas - MAXIMO_HORAS_TRABALHADAS;
+    if(horasTrabalhadas > LIMITE_HORAS_TRABALHADAS) {
+        double horasExtras = horasTrabalhadas - LIMITE_HORAS_TRABALHADAS;
         horasTrabalhadas += horasExtras * ACRESCIMO_HORA_EXTRA;
     }
     return horasTrabalhadas * this->salarioHora;
