@@ -12,16 +12,16 @@ class Empregado {
     double quotaMensalVendas;  
 
   public:
-    void setNome(std::string nome) {}
-    std::string getNome() {}
+    void setNome(std::string nome);
+    std::string getNome();
 
-    void setSalarioHora(double valor) {}
-    double getSalarioHora() {}
+    void setSalarioHora(double valor);
+    double getSalarioHora();
 
-    void setQuotaMensalVendas(double valor) {}
-    double getQuotaMensalVendas() {}
+    void setQuotaMensalVendas(double valor);
+    double getQuotaMensalVendas();
 
-    double pagamentoMensal(double horasTrabalhadas) {}
+    double pagamentoMensal(double horasTrabalhadas);
 
 };
 
